@@ -6,19 +6,19 @@ Import-Module Azure -ErrorAction SilentlyContinue
 #DEPLOYMENT OPTIONS
     $templateToDeploy        = "FullDeploy.json"
     # MUST be unique for all your simultaneous/co-existing deployments of this ADName in the same region
-    $VNetAddrSpace2ndOctet   = "<ENTER A UNIQUE DEPLOYMENT NUMBER, 0-9>"
+    $VNetAddrSpace2ndOctet   = "6"
 
     # Must be unique for simultaneous/co-existing deployments
     #"master" or "dev"
-    $RGName                  = "<YOUR RESOURCE GROUP>"
-    $DeployRegion            = "<SELECT AZURE REGION>"
+    $RGName                  = "rg-adfspoc-01"
+    $DeployRegion            = "southeast asia"
 
     $Branch                  = "master"
     $AssetLocation           = "https://raw.githubusercontent.com/Azure-Samples/active-directory-lab-hybrid-adfs/$Branch/lab-hybrid-adfs/"
 
-    $userName                = "<AD ADMINISTRATOR LOGIN>"
-    $secpasswd               = “<AD ADMINISTRATOR PASSWORD>”
-    $adDomainName            = "<2-PART AD DOMAIN NAME, LIKE CONTOSO.COM>"
+    $userName                = "azure-admin"
+    $secpasswd               = “Password@123”
+    $adDomainName            = "adfspoc.local"
     $usersArray              = @(
                                 @{ "FName"= "Bob";  "LName"= "Jones";    "SAM"= "bjones" },
                                 @{ "FName"= "Bill"; "LName"= "Smith";    "SAM"= "bsmith" },
