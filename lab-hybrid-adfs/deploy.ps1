@@ -21,8 +21,6 @@ Import-Module Azure -ErrorAction SilentlyContinue
     $adDomainName            = "adfspoc.local"
     $usersArray              = @(
                                 @{ "FName"= "Bob";  "LName"= "Jones";    "SAM"= "bjones" },
-                                @{ "FName"= "Bill"; "LName"= "Smith";    "SAM"= "bsmith" },
-                                @{ "FName"= "Mary"; "LName"= "Phillips"; "SAM"= "mphillips" },
                                 @{ "FName"= "Sue";  "LName"= "Jackson";  "SAM"= "sjackson" }
                                )
     $defaultUserPassword     = "P@ssw0rd"
